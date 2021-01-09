@@ -15,7 +15,8 @@ abstract class TaskDatabase :RoomDatabase(){
     abstract fun taskDao(): TaskDao
 
     class Callback @Inject constructor (
-        private val database: Provider<TaskDatabase>,
+       private val database: Provider<TaskDatabase>,
+        //private val taskDao: Provider<TaskDao>,
         @ApplicationScope private val applicationScope: CoroutineScope
 
     ):RoomDatabase.Callback()
